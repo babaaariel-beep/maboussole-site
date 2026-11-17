@@ -25,6 +25,7 @@
       <a class="lien-tarifs" href="#tarifs">Tarifs</a>
       <a href="#fonctions">Fonctions</a>
       <a href="#etapes">Comment ça marche</a>
+      <a href="#installer">Installer</a>
       <a href="#questions">Questions</a>
       <a class="bouton petit" href="#telecharger">Télécharger</a>
     </nav>
@@ -72,28 +73,28 @@
       <p class="intro">Toutes les fonctions sont incluses dans chaque formule. Une clé = un ordinateur.</p>
       <div class="essai-bandeau"><b>🎁 Essai gratuit de 2 jours</b><span>Téléchargez, cliquez sur « Essayer gratuitement » à la première ouverture. Aucun paiement.</span><a class="bouton petit" href="#telecharger">Télécharger</a></div>
       <div class="grille-tarifs">
-        <article class="tarif">
+        <article class="tarif" data-jours="30">
           <h3>1 mois</h3><p class="pour">Pour découvrir</p>
           <p class="prix"><b>3 000</b><span>F CFA</span></p>
           <p class="par-mois">soit 3 000 F par mois</p>
           <ul><li>Toutes les fonctions</li><li>148 actifs en temps réel</li><li>Replay et backtest</li></ul>
           <a class="bouton fantome large" href="mailto:babaaariel@gmail.com?subject=Commande%20cl%C3%A9%20MaBoussole%20Graphiques%20%E2%80%94%201%20mois">Choisir 1 mois</a>
         </article>
-        <article class="tarif">
+        <article class="tarif" data-jours="90">
           <h3>3 mois</h3><p class="pour">Pour progresser</p>
           <p class="prix"><b>9 000</b><span>F CFA</span></p>
           <p class="par-mois">soit 3 000 F par mois</p>
           <ul><li>Toutes les fonctions</li><li>148 actifs en temps réel</li><li>Replay et backtest</li></ul>
           <a class="bouton fantome large" href="mailto:babaaariel@gmail.com?subject=Commande%20cl%C3%A9%20MaBoussole%20Graphiques%20%E2%80%94%203%20mois">Choisir 3 mois</a>
         </article>
-        <article class="tarif">
+        <article class="tarif" data-jours="180">
           <h3>6 mois</h3><p class="pour">Pour s'installer</p>
           <p class="prix"><b>18 000</b><span>F CFA</span></p>
           <p class="par-mois">soit 3 000 F par mois</p>
           <ul><li>Toutes les fonctions</li><li>148 actifs en temps réel</li><li>Replay et backtest</li></ul>
           <a class="bouton fantome large" href="mailto:babaaariel@gmail.com?subject=Commande%20cl%C3%A9%20MaBoussole%20Graphiques%20%E2%80%94%206%20mois">Choisir 6 mois</a>
         </article>
-        <article class="tarif vedette">
+        <article class="tarif vedette" data-jours="365">
           <span class="ruban">★ Meilleure offre</span>
           <h3>1 an</h3><p class="pour">Le meilleur prix</p>
           <p class="prix"><b>24 000</b><span>F CFA</span></p>
@@ -178,17 +179,65 @@
           <h3>Windows</h3>
           <p>Windows 10 et 11 · un seul fichier, environ 50 Mo</p>
           <a class="bouton" id="dlWin" href="telechargement/MaBoussole-Setup.exe" download>Télécharger pour Windows</a>
-          <small>Si Windows affiche « Windows a protégé votre ordinateur » : « Informations complémentaires », puis « Exécuter quand même ».</small>
+          <small>Windows ou l'antivirus bloque ? <a href="#installer">Voir comment installer</a>.</small>
         </div>
         <div class="dl">
           <svg class="os" viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.8-3.5.8-.7 0-1.8-.8-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2-1.1 2.8-2.3.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.5-.9-2.5-3.6zM14.2 5.5c.6-.8 1.1-1.8 1-2.9-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.7-1 2.8 1 .1 2.1-.5 2.7-1.3z"/></svg>
           <h3>Mac</h3>
           <p>Mac Intel et Apple M1, M2, M3, M4 · une seule application</p>
           <a class="bouton" id="dlMac" href="telechargement/MaBoussole-Mac.zip" download>Télécharger pour Mac</a>
-          <small>La première fois : clic droit sur l'application, puis « Ouvrir ».</small>
+          <small>La première fois : clic droit sur l'application, puis « Ouvrir ». <a href="#installer">Aide</a></small>
         </div>
       </div>
       <p class="note">Il faut une connexion internet pour recevoir les cotations en temps réel.</p>
+    </div>
+  </section>
+
+  <section id="installer" class="section">
+    <div class="conteneur etroit">
+      <p class="sur-titre">Installation</p>
+      <h2>Comment installer</h2>
+      <p class="intro">Le logiciel est récent et pas encore « signé » chez Microsoft et Apple : votre ordinateur peut afficher un avertissement la première fois. C'est normal, voici quoi faire.</p>
+
+      <div class="install-onglets" role="tablist">
+        <button class="install-onglet actif" data-os="windows" role="tab" aria-selected="true">Windows</button>
+        <button class="install-onglet" data-os="mac" role="tab" aria-selected="false">Mac</button>
+      </div>
+
+      <div class="install-page" data-os="windows">
+        <ol class="install-etapes">
+          <li><b>Téléchargez</b> le fichier <code>MaBoussole-Setup.exe</code> avec le bouton « Télécharger pour Windows ».</li>
+          <li><b>Si le navigateur bloque le téléchargement</b> (« Ce fichier peut être dangereux », « n'est pas souvent téléchargé ») :
+            <ul>
+              <li><b>Chrome</b> : cliquez sur la flèche du téléchargement, puis <b>« Conserver »</b> (ou « Télécharger quand même »).</li>
+              <li><b>Edge</b> : cliquez sur les <b>« … »</b> à côté du fichier, <b>« Conserver »</b>, puis <b>« Afficher plus » → « Conserver quand même »</b>.</li>
+            </ul></li>
+          <li><b>Double-cliquez</b> sur le fichier téléchargé (dans le dossier « Téléchargements »).</li>
+          <li><b>Si Windows affiche « Windows a protégé votre ordinateur »</b> (écran bleu) : cliquez sur <b>« Informations complémentaires »</b>, puis sur <b>« Exécuter quand même »</b>.</li>
+          <li><b>Si votre antivirus bloque ou met le fichier « en quarantaine »</b> : ouvrez votre antivirus, allez dans <b>Quarantaine</b> (ou « Historique de protection » pour Windows Defender), choisissez le fichier <b>MaBoussole-Setup.exe</b> puis <b>« Restaurer »</b> / <b>« Autoriser »</b>. Relancez ensuite le fichier.</li>
+          <li><b>Patientez quelques secondes</b> la première fois : la fenêtre du logiciel s'ouvre toute seule. Cliquez sur <b>« Essayer gratuitement »</b> ou collez votre clé.</li>
+        </ol>
+      </div>
+
+      <div class="install-page" data-os="mac" hidden>
+        <ol class="install-etapes">
+          <li><b>Téléchargez</b> <code>MaBoussole-Mac.zip</code> et double-cliquez dessus : l'application <b>MaBoussole</b> apparaît.</li>
+          <li>Glissez-la dans le dossier <b>Applications</b> (conseillé).</li>
+          <li><b>La première fois</b>, ne double-cliquez pas : faites un <b>clic droit</b> (ou Ctrl + clic) sur l'application, puis <b>« Ouvrir »</b>, et confirmez <b>« Ouvrir »</b>.</li>
+          <li><b>Si le Mac dit « impossible de vérifier le développeur »</b> ou « l'application est endommagée » : ouvrez <b>Réglages Système → Confidentialité et sécurité</b>, descendez et cliquez sur <b>« Ouvrir quand même »</b>, puis confirmez avec votre mot de passe.</li>
+          <li>Ensuite, l'application s'ouvre normalement d'un simple double-clic.</li>
+        </ol>
+      </div>
+
+      <div class="install-aide">
+        <h3>Toujours bloqué ?</h3>
+        <ul>
+          <li><b>Rien ne s'ouvre</b> : attendez 15 secondes (la première ouverture prépare le logiciel), puis double-cliquez à nouveau.</li>
+          <li><b>Le graphique ne charge pas</b> : vérifiez votre connexion internet, les cotations arrivent en direct.</li>
+          <li><b>« Clé refusée »</b> : copiez la clé en entier, sans espace ; une clé ne fonctionne que sur un seul ordinateur.</li>
+          <li><b>Autre problème</b> : écrivez au support (bouton en bas de la page), en disant ce qui s'affiche.</li>
+        </ul>
+      </div>
     </div>
   </section>
 

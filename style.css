@@ -167,3 +167,18 @@ details p { margin: 0 0 18px; color: var(--doux); }
   .bouton.petit { padding: 8px 12px; font-size: 13px; }
   .menu { gap: 14px; }
 }
+
+/* comment installer */
+.install-onglets { display: flex; justify-content: center; gap: 8px; margin: 0 0 22px; }
+.install-onglet { padding: 10px 22px; border-radius: 999px; border: 1px solid var(--bord2); background: transparent; color: var(--doux); font: inherit; font-weight: 700; cursor: pointer; }
+.install-onglet.actif { background: linear-gradient(135deg, var(--bleu2), var(--vert)); color: #fff; border-color: transparent; }
+.install-etapes { counter-reset: e; list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.install-etapes > li { counter-increment: e; position: relative; background: var(--carte); border: 1px solid var(--bord); border-radius: 14px; padding: 16px 18px 16px 62px; color: #cfd6e6; }
+.install-etapes > li::before { content: counter(e); position: absolute; left: 16px; top: 14px; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--bleu2), var(--vert)); color: #fff; font-weight: 800; }
+.install-etapes ul { margin: 8px 0 0; padding-left: 18px; color: var(--doux); }
+.install-etapes code { background: rgba(255,255,255,.06); padding: 1px 6px; border-radius: 6px; font-size: 14px; }
+.install-aide { margin-top: 26px; padding: 20px 22px; border-radius: 14px; border: 1px dashed var(--bord2); }
+.install-aide h3 { margin: 0 0 8px; }
+.install-aide ul { margin: 0; padding-left: 18px; color: var(--doux); display: grid; gap: 6px; }
+.dl small a, .install-aide a { color: #8db6ff; }
