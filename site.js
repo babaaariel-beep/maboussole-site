@@ -53,3 +53,47 @@ var REGISTRE = "";
     });
   }).catch(function () { /* feuille injoignable : on garde les prix écrits dans la page */ });
 })();
+
+// Commande en ligne : nom + e-mail, puis page de paiement SasPay (mobile money / carte) ; la clé part par e-mail toute seule.
+// Tant que REGISTRE est vide, les boutons gardent l'e-mail au support.
+(function () {
+  var merci = document.getElementById("merci");
+  if (/[?&]merci=1/.test(location.search) && merci) {
+    merci.hidden = false;
+    merci.querySelector("button").onclick = function () { merci.hidden = true; };
+    try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) { /* rien */ }
+  }
+  if (!REGISTRE) return;
+  var fen = document.getElementById("commande"), form = document.getElementById("commandeForm");
+  var err = document.getElementById("commandeErreur"), payer = document.getElementById("commandePayer"), jours = 0;
+  var note = document.querySelector(".tarifs-note");
+  if (note) note.textContent = "Cliquez sur votre formule, payez en Mobile Money (Orange, MTN, Wave, Moov) ou par carte : votre clé arrive par e-mail en quelques minutes.";
+  function fermer() { fen.hidden = true; }
+  document.getElementById("commandeFermer").onclick = fermer;
+  fen.addEventListener("click", function (e) { if (e.target === fen) fermer(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") fermer(); });
+  document.querySelectorAll(".tarif[data-jours] a.bouton").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      var carte = a.closest(".tarif");
+      jours = +carte.dataset.jours;
+      document.getElementById("commandeFormule").textContent = "· " + (carte.querySelector("h3") || {}).textContent;
+      document.getElementById("commandePrix").textContent = (carte.querySelector(".prix") || {}).textContent.replace(/\s+/g, " ").trim();
+      err.hidden = true; payer.disabled = false; fen.hidden = false;
+      document.getElementById("commandeNom").focus();
+    });
+  });
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    err.hidden = true; payer.disabled = true;
+    var corps = JSON.stringify({ action: "acheter", jours: jours, nom: document.getElementById("commandeNom").value.trim(),
+      email: document.getElementById("commandeEmail").value.trim() });
+    // text/plain : accepté par Google sans requête préalable ; le nom et l'e-mail voyagent dans le corps, pas dans l'adresse
+    fetch(REGISTRE, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: corps }).then(function (r) { return r.json(); }).then(function (d) {
+      if (d.ok && /^https:\/\//.test(d.url)) { location.href = d.url; return; }
+      err.textContent = d.erreur || "Paiement momentanément indisponible. Réessayez dans un instant."; err.hidden = false; payer.disabled = false;
+    }).catch(function () {
+      err.textContent = "Connexion impossible. Vérifiez votre internet et réessayez."; err.hidden = false; payer.disabled = false;
+    });
+  });
+})();

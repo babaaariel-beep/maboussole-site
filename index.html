@@ -273,6 +273,18 @@
     <p class="copyright">© <span id="annee">2026</span> MaBoussole Graphiques</p>
   </div>
 </footer>
+<div class="fenetre" id="commande" hidden>
+  <form class="fenetre-boite" id="commandeForm">
+    <button type="button" class="fenetre-fermer" id="commandeFermer" aria-label="Fermer">×</button>
+    <h3>Commander <span id="commandeFormule"></span></h3>
+    <p class="doux">Paiement sécurisé par SasPay : Orange Money, MTN MoMo, Wave, Moov ou carte bancaire. Votre clé arrive par e-mail dès le paiement confirmé.</p>
+    <label>Votre nom<input id="commandeNom" required maxlength="60" autocomplete="name"></label>
+    <label>Votre e-mail (la clé y sera envoyée)<input id="commandeEmail" type="email" required maxlength="120" autocomplete="email"></label>
+    <p class="fenetre-erreur" id="commandeErreur" hidden></p>
+    <button class="bouton or large" id="commandePayer" type="submit">Payer <span id="commandePrix"></span></button>
+  </form>
+</div>
+<div class="bandeau-merci" id="merci" hidden>✅ Paiement reçu, merci ! Votre clé arrive par e-mail dans quelques minutes (pensez à regarder les spams). <button type="button" aria-label="Fermer">×</button></div>
 <script src="site.js"></script>
 </body>
 </html>

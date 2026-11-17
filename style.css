@@ -182,3 +182,18 @@ details p { margin: 0 0 18px; color: var(--doux); }
 .install-aide h3 { margin: 0 0 8px; }
 .install-aide ul { margin: 0; padding-left: 18px; color: var(--doux); display: grid; gap: 6px; }
 .dl small a, .install-aide a { color: #8db6ff; }
+
+/* Fenêtre de commande (paiement SasPay) */
+.fenetre { position: fixed; inset: 0; z-index: 100; background: rgba(4, 7, 14, .72); display: flex; align-items: center; justify-content: center; padding: 16px; }
+.fenetre[hidden] { display: none; }
+.fenetre-boite { position: relative; width: min(440px, 100%); background: var(--carte); border: 1px solid var(--bord2); border-radius: var(--rayon); box-shadow: var(--ombre); padding: 28px 24px 24px; display: grid; gap: 14px; }
+.fenetre-boite h3 { margin: 0; font-size: 22px; }
+.fenetre-boite .doux { margin: 0; color: var(--doux); font-size: 14px; }
+.fenetre-boite label { display: grid; gap: 6px; font-size: 14px; color: var(--doux); }
+.fenetre-boite input { font: inherit; color: var(--texte); background: var(--fond2); border: 1px solid var(--bord2); border-radius: 10px; padding: 12px 14px; }
+.fenetre-boite input:focus { outline: 2px solid var(--bleu); outline-offset: 1px; }
+.fenetre-fermer { position: absolute; top: 10px; right: 12px; background: none; border: 0; color: var(--doux); font-size: 26px; cursor: pointer; line-height: 1; }
+.fenetre-erreur { margin: 0; color: #ff8a8a; font-size: 14px; }
+.bandeau-merci { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 90; background: #0f3d2e; border: 1px solid var(--vert); color: var(--texte); border-radius: 14px; padding: 14px 44px 14px 16px; box-shadow: var(--ombre); }
+.bandeau-merci[hidden] { display: none; }
+.bandeau-merci button { position: absolute; top: 8px; right: 10px; background: none; border: 0; color: var(--texte); font-size: 22px; cursor: pointer; }
