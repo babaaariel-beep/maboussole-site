@@ -112,3 +112,6 @@ details p { margin: 0 0 18px; color: var(--doux); }
   .marque img { width: 28px; height: 28px; }
   .bouton.petit { padding: 8px 12px; font-size: 13px; }
 }
+
+.compteur { text-align: center; font-weight: 700; color: var(--doux); margin: -6px 0 18px; font-size: 15px; }
+.compteur::before { content: "⬇ "; }

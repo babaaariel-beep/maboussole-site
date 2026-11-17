@@ -1,0 +1,27 @@
+# Publie chaque nouvelle version du logiciel dans les « Releases » du dépôt :
+# GitHub y compte tout seul chaque téléchargement (compteur affiché sur le site et dans votre tableau de bord).
+# Se lance tout seul quand un nouveau .exe (ou .zip Mac) est envoyé dans le dossier « telechargement ».
+name: Publier le logiciel
+
+on:
+  push:
+    branches: [main]
+    paths: ["telechargement/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Créer la version
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="logiciel-$(date -u +%Y.%m.%d)-${{ github.run_number }}"
+          FICHIERS=$(ls telechargement/MaBoussole-Setup.exe telechargement/MaBoussole-Mac.zip 2>/dev/null)
+          gh release create "$TAG" $FICHIERS --title "MaBoussole Graphiques $(date -u +%d/%m/%Y)" \
+            --notes "Nouvelle version de MaBoussole Graphiques (Windows$( [ -f telechargement/MaBoussole-Mac.zip ] && echo ' et Mac'))." --latest

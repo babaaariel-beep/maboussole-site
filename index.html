@@ -124,13 +124,14 @@
   <section id="telecharger" class="section">
     <div class="conteneur">
       <h2>Télécharger MaBoussole Graphiques</h2>
-      <p class="intro">Gratuit à télécharger. Une clé d'activation est nécessaire pour l'utiliser.</p>
+      <p class="intro">Gratuit à télécharger, <b>essai gratuit de 2 jours</b> dès la première ouverture. Ensuite, une clé d'activation est nécessaire pour continuer.</p>
+      <p class="compteur" id="compteurDl" hidden></p>
       <div class="telechargements">
         <div class="dl">
           <svg class="os" viewBox="0 0 24 24"><path d="M3 5.5l7.5-1v7H3zM11.5 4.4L21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zM11.5 12.5H21V21l-9.5-1.4z"/></svg>
           <h3>Windows</h3>
-          <p>Windows 10 et 11 · un seul fichier, environ 9 Mo</p>
-          <a class="bouton" href="telechargement/MaBoussole-Setup.exe" download>Télécharger pour Windows</a>
+          <p>Windows 10 et 11 · un seul fichier, environ 50 Mo</p>
+          <a class="bouton" id="dlWin" href="telechargement/MaBoussole-Setup.exe" download>Télécharger pour Windows</a>
           <small>Si Windows affiche « Windows a protégé votre ordinateur » : « Informations complémentaires », puis « Exécuter quand même ».</small>
         </div>
         <div class="dl">
@@ -150,10 +151,11 @@
       <h2>Questions fréquentes</h2>
       <details><summary>Faut-il installer Python ou autre chose ?</summary><p>Non. Vous téléchargez un seul fichier et vous double-cliquez dessus. Rien d'autre à installer.</p></details>
       <details><summary>Est-ce que ça marche sur les Mac Intel et sur les Mac M1, M2, M3, M4 ?</summary><p>Oui, la même application fonctionne sur les deux types de Mac.</p></details>
-      <details><summary>Faut-il une connexion internet ?</summary><p>Oui, pour recevoir les cotations en temps réel. L'activation de votre clé, elle, fonctionne sans internet.</p></details>
-      <details><summary>Est-ce que je peux utiliser ma clé sur plusieurs ordinateurs ?</summary><p>Non : une clé est liée à un ordinateur. Pour un autre ordinateur, envoyez-nous son code machine et nous vous donnons une nouvelle clé.</p></details>
+      <details><summary>Faut-il une connexion internet ?</summary><p>Oui, pour recevoir les cotations en temps réel, et une fois au moment d'activer votre clé ou de démarrer l'essai gratuit.</p></details>
+      <details><summary>Comment marche l'essai gratuit ?</summary><p>À la première ouverture, cliquez sur « Essayer gratuitement » : toutes les fonctions pendant 2 jours, sans paiement. L'essai n'est possible qu'une fois par ordinateur. Ensuite, achetez une clé pour continuer.</p></details>
+      <details><summary>Est-ce que je peux utiliser ma clé sur plusieurs ordinateurs ?</summary><p>Non : à la première activation, la clé se lie à votre ordinateur et ne fonctionne sur aucun autre. Pour un autre ordinateur, il faut une autre clé.</p></details>
       <details><summary>Est-ce que l'application passe de vrais ordres ?</summary><p>Non. Les positions sont simulées : vous vous entraînez et mesurez votre stratégie sans risquer d'argent.</p></details>
-      <details><summary>Mes données sont-elles envoyées quelque part ?</summary><p>Non. Vos dessins, analyses et backtests restent sur votre ordinateur.</p></details>
+      <details><summary>Mes données sont-elles envoyées quelque part ?</summary><p>Vos dessins, analyses et backtests restent sur votre ordinateur. À chaque ouverture, le logiciel envoie seulement un identifiant anonyme de l'ordinateur (sans nom ni adresse e-mail), pour vérifier la clé ou l'essai et compter les utilisateurs actifs.</p></details>
     </div>
   </section>
 
