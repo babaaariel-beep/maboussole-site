@@ -1,0 +1,30 @@
+Site vitrine MaBoussole Graphiques - mise en ligne
+=================================================
+
+CONTENU DU DOSSIER « site_vitrine »
+- index.html, style.css, site.js : le site
+- images/ : logo et capture de l'application (sans calendrier SMV ni données personnelles)
+- telechargement/MaBoussole-Setup.exe : la version Windows
+- netlify.toml : réglages de sécurité pour Netlify
+(Ce fichier LISEZ-MOI n'est pas nécessaire en ligne : vous pouvez le laisser, il ne gêne pas.)
+
+AVANT DE PUBLIER : À COMPLÉTER
+- Dans index.html, section « Obtenir votre clé d'activation » : remplacez contact@votre-domaine.com
+  par votre adresse e-mail (ou un lien WhatsApp / Telegram).
+- Version Mac : quand vous aurez MaBoussole-Mac.zip (fabriqué sur un Mac), mettez-le dans telechargement/.
+  Le bouton « Télécharger pour Mac » s'activera tout seul.
+
+METTRE EN LIGNE SUR NETLIFY (gratuit)
+1. Créez un compte sur netlify.com.
+2. « Add new site » > « Deploy manually », puis glissez le dossier site_vitrine dans la page.
+3. Le site est en ligne à une adresse du type quelque-chose.netlify.app.
+
+AVOIR VOTRE PROPRE NOM (sans « netlify » dans l'adresse)
+1. Achetez un nom de domaine (ex. maboussole.com) chez un vendeur de noms : environ 10-15 €/an.
+2. Dans Netlify : votre site > « Domain management » > « Add a domain » > tapez votre nom.
+3. Netlify vous indique les réglages DNS à recopier chez le vendeur du nom (ou propose de gérer le nom pour vous).
+4. Netlify active le cadenas HTTPS tout seul (quelques minutes à quelques heures).
+5. Facultatif : dans Netlify, faites de votre nom l'adresse principale. L'adresse .netlify.app redirigera alors vers lui.
+
+APERÇU SUR VOTRE PC
+Dans le dossier EdgeFinder :  python -m http.server 8800 --directory site_vitrine   puis ouvrez http://localhost:8800

@@ -1,0 +1,522 @@
+{
+"EURUSD": {
+"duka": "EURUSD",
+"debut": 2002,
+"fxcm": true
+},
+"GBPUSD": {
+"duka": "GBPUSD",
+"debut": 2002,
+"fxcm": true
+},
+"USDJPY": {
+"duka": "USDJPY",
+"debut": 2002,
+"fxcm": true
+},
+"USDCHF": {
+"duka": "USDCHF",
+"debut": 2002,
+"fxcm": true
+},
+"USDCAD": {
+"duka": "USDCAD",
+"debut": 2002,
+"fxcm": true
+},
+"AUDUSD": {
+"duka": "AUDUSD",
+"debut": 2002,
+"fxcm": true
+},
+"NZDUSD": {
+"duka": "NZDUSD",
+"debut": 2002,
+"fxcm": true
+},
+"EURGBP": {
+"duka": "EURGBP",
+"debut": 2002,
+"fxcm": true
+},
+"EURJPY": {
+"duka": "EURJPY",
+"debut": 2002,
+"fxcm": true
+},
+"EURCHF": {
+"duka": "EURCHF",
+"debut": 2002,
+"fxcm": true
+},
+"EURCAD": {
+"duka": "EURCAD",
+"debut": 2002,
+"fxcm": false
+},
+"EURAUD": {
+"duka": "EURAUD",
+"debut": 2002,
+"fxcm": true
+},
+"EURNZD": {
+"duka": "EURNZD",
+"debut": 2002,
+"fxcm": true
+},
+"GBPJPY": {
+"duka": "GBPJPY",
+"debut": 2002,
+"fxcm": true
+},
+"GBPCHF": {
+"duka": "GBPCHF",
+"debut": 2002,
+"fxcm": true
+},
+"GBPCAD": {
+"duka": "GBPCAD",
+"debut": 2002,
+"fxcm": true
+},
+"GBPAUD": {
+"duka": "GBPAUD",
+"debut": 2002,
+"fxcm": false
+},
+"GBPNZD": {
+"duka": "GBPNZD",
+"debut": 2002,
+"fxcm": true
+},
+"AUDJPY": {
+"duka": "AUDJPY",
+"debut": 2002,
+"fxcm": true
+},
+"AUDCAD": {
+"duka": "AUDCAD",
+"debut": 2002,
+"fxcm": true
+},
+"AUDCHF": {
+"duka": "AUDCHF",
+"debut": 2002,
+"fxcm": true
+},
+"AUDNZD": {
+"duka": "AUDNZD",
+"debut": 2002,
+"fxcm": true
+},
+"NZDJPY": {
+"duka": "NZDJPY",
+"debut": 2002,
+"fxcm": true
+},
+"NZDCAD": {
+"duka": "NZDCAD",
+"debut": 2002,
+"fxcm": true
+},
+"NZDCHF": {
+"duka": "NZDCHF",
+"debut": 2002,
+"fxcm": true
+},
+"CADJPY": {
+"duka": "CADJPY",
+"debut": 2002,
+"fxcm": true
+},
+"CADCHF": {
+"duka": "CADCHF",
+"debut": 2002,
+"fxcm": true
+},
+"CHFJPY": {
+"duka": "CHFJPY",
+"debut": 2002,
+"fxcm": false
+},
+"GOLD": {
+"duka": "XAUUSD",
+"debut": 2002,
+"fxcm": false
+},
+"SILVER": {
+"duka": "XAGUSD",
+"debut": 2002,
+"fxcm": false
+},
+"COPPER": {
+"duka": "COPPERCMDUSD",
+"debut": 2003,
+"fxcm": false
+},
+"USOIL": {
+"duka": "LIGHTCMDUSD",
+"debut": 2003,
+"fxcm": false
+},
+"NATGAS": {
+"duka": "GASCMDUSD",
+"debut": 2003,
+"fxcm": false
+},
+"SPX500": {
+"duka": "USA500IDXUSD",
+"debut": 2011,
+"fxcm": false
+},
+"NASDAQ": {
+"duka": "USATECHIDXUSD",
+"debut": 2011,
+"fxcm": false
+},
+"DOW": {
+"duka": "USA30IDXUSD",
+"debut": 2013,
+"fxcm": false
+},
+"RUSSELL": {
+"duka": "USSC2000IDXUSD",
+"debut": 2003,
+"fxcm": false
+},
+"NIKKEI": {
+"duka": "JPNIDXJPY",
+"debut": 2011,
+"fxcm": false
+},
+"DAX": {
+"duka": "DEUIDXEUR",
+"debut": 2013,
+"fxcm": false
+},
+"UK100": {
+"duka": "GBRIDXGBP",
+"debut": 2002,
+"fxcm": false
+},
+"USDMXN": {
+"duka": "USDMXN",
+"debut": 2002,
+"fxcm": false
+},
+"USDPLN": {
+"duka": "USDPLN",
+"debut": 2002,
+"fxcm": false
+},
+"AUS200": {
+"duka": "AUSIDXAUD",
+"debut": 2013,
+"fxcm": false
+},
+"HK50": {
+"duka": "HKGIDXHKD",
+"debut": 2011,
+"fxcm": false
+},
+"EU50": {
+"duka": "EUSIDXEUR",
+"debut": 2011,
+"fxcm": false
+},
+"FRA40": {
+"duka": "FRAIDXEUR",
+"debut": 2011,
+"fxcm": false
+},
+"NL25": {
+"duka": "NLDIDXEUR",
+"debut": 2013,
+"fxcm": false
+},
+"SUI20": {
+"duka": "CHEIDXCHF",
+"debut": 2011,
+"fxcm": false
+},
+"USDCNH": {
+"duka": "USDCNH",
+"debut": 2003,
+"fxcm": false
+},
+"USDZAR": {
+"duka": "USDZAR",
+"debut": 2003,
+"fxcm": false
+},
+"USDTRY": {
+"duka": "USDTRY",
+"debut": 2003,
+"fxcm": false
+},
+"USDSEK": {
+"duka": "USDSEK",
+"debut": 2002,
+"fxcm": false
+},
+"USDNOK": {
+"duka": "USDNOK",
+"debut": 2003,
+"fxcm": false
+},
+"USDDKK": {
+"duka": "USDDKK",
+"debut": 2003,
+"fxcm": false
+},
+"USDHKD": {
+"duka": "USDHKD",
+"debut": 2003,
+"fxcm": false
+},
+"USDSGD": {
+"duka": "USDSGD",
+"debut": 2003,
+"fxcm": false
+},
+"USDHUF": {
+"duka": "USDHUF",
+"debut": 2003,
+"fxcm": false
+},
+"USDCZK": {
+"duka": "USDCZK",
+"debut": 2003,
+"fxcm": false
+},
+"EURTRY": {
+"duka": "EURTRY",
+"debut": 2003,
+"fxcm": false
+},
+"EURZAR": {
+"duka": "EURZAR",
+"debut": 2003,
+"fxcm": false
+},
+"EURSEK": {
+"duka": "EURSEK",
+"debut": 2003,
+"fxcm": false
+},
+"EURNOK": {
+"duka": "EURNOK",
+"debut": 2003,
+"fxcm": false
+},
+"EURPLN": {
+"duka": "EURPLN",
+"debut": 2002,
+"fxcm": false
+},
+"EURHUF": {
+"duka": "EURHUF",
+"debut": 2003,
+"fxcm": false
+},
+"EURCZK": {
+"duka": "EURCZK",
+"debut": 2003,
+"fxcm": false
+},
+"EURDKK": {
+"duka": "EURDKK",
+"debut": 2003,
+"fxcm": false
+},
+"EURSGD": {
+"duka": "EURSGD",
+"debut": 2003,
+"fxcm": false
+},
+"EURHKD": {
+"duka": "EURHKD",
+"debut": 2003,
+"fxcm": false
+},
+"EURMXN": {
+"duka": "EURMXN",
+"debut": 2002,
+"fxcm": false
+},
+"EURCNH": {
+"duka": "EURCNH",
+"debut": 2003,
+"fxcm": false
+},
+"GBPZAR": {
+"duka": "GBPZAR",
+"debut": 2003,
+"fxcm": false
+},
+"GBPSGD": {
+"duka": "GBPSGD",
+"debut": 2003,
+"fxcm": false
+},
+"GBPNOK": {
+"duka": "GBPNOK",
+"debut": 2003,
+"fxcm": false
+},
+"GBPSEK": {
+"duka": "GBPSEK",
+"debut": 2003,
+"fxcm": false
+},
+"GBPPLN": {
+"duka": "GBPPLN",
+"debut": 2002,
+"fxcm": false
+},
+"GBPMXN": {
+"duka": "GBPMXN",
+"debut": 2024,
+"fxcm": false
+},
+"GBPHKD": {
+"duka": "GBPHKD",
+"debut": 2003,
+"fxcm": false
+},
+"GBPDKK": {
+"duka": "GBPDKK",
+"debut": 2003,
+"fxcm": false
+},
+"AUDSGD": {
+"duka": "AUDSGD",
+"debut": 2003,
+"fxcm": false
+},
+"AUDHKD": {
+"duka": "AUDHKD",
+"debut": 2003,
+"fxcm": false
+},
+"AUDCNH": {
+"duka": "AUDCNH",
+"debut": 2003,
+"fxcm": false
+},
+"NZDSGD": {
+"duka": "NZDSGD",
+"debut": 2003,
+"fxcm": false
+},
+"CADSGD": {
+"duka": "CADSGD",
+"debut": 2003,
+"fxcm": false
+},
+"CHFHKD": {
+"duka": "CHFHKD",
+"debut": 2003,
+"fxcm": false
+},
+"SGDJPY": {
+"duka": "SGDJPY",
+"debut": 2003,
+"fxcm": false
+},
+"ZARJPY": {
+"duka": "ZARJPY",
+"debut": 2003,
+"fxcm": false
+},
+"TRYJPY": {
+"duka": "TRYJPY",
+"debut": 2003,
+"fxcm": false
+},
+"HKDJPY": {
+"duka": "HKDJPY",
+"debut": 2003,
+"fxcm": false
+},
+"NOKJPY": {
+"duka": "NOKJPY",
+"debut": 2003,
+"fxcm": false
+},
+"CNHJPY": {
+"duka": "CNHJPY",
+"debut": 2003,
+"fxcm": false
+},
+"NOKSEK": {
+"duka": "NOKSEK",
+"debut": 2003,
+"fxcm": false
+},
+"AUDNOK": {
+"duka": "AUDNOK",
+"debut": 2003,
+"fxcm": false
+},
+"AUDPLN": {
+"duka": "AUDPLN",
+"debut": 2002,
+"fxcm": false
+},
+"CADHKD": {
+"duka": "CADHKD",
+"debut": 2003,
+"fxcm": false
+},
+"CADNOK": {
+"duka": "CADNOK",
+"debut": 2003,
+"fxcm": false
+},
+"CADPLN": {
+"duka": "CADPLN",
+"debut": 2002,
+"fxcm": false
+},
+"CHFHUF": {
+"duka": "CHFHUF",
+"debut": 2003,
+"fxcm": false
+},
+"CHFNOK": {
+"duka": "CHFNOK",
+"debut": 2003,
+"fxcm": false
+},
+"CHFPLN": {
+"duka": "CHFPLN",
+"debut": 2004,
+"fxcm": false
+},
+"CHFZAR": {
+"duka": "CHFZAR",
+"debut": 2003,
+"fxcm": false
+},
+"NOKDKK": {
+"duka": "NOKDKK",
+"debut": 2003,
+"fxcm": false
+},
+"NZDHKD": {
+"duka": "NZDHKD",
+"debut": 2003,
+"fxcm": false
+},
+"SGDCHF": {
+"duka": "SGDCHF",
+"debut": 2003,
+"fxcm": false
+},
+"SGDHKD": {
+"duka": "SGDHKD",
+"debut": 2003,
+"fxcm": false
+}
+}
