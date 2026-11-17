@@ -9,7 +9,7 @@ CONTENU DU DOSSIER « site_vitrine »
 (Ce fichier LISEZ-MOI n'est pas nécessaire en ligne : vous pouvez le laisser, il ne gêne pas.)
 
 AVANT DE PUBLIER : À COMPLÉTER
-- Dans index.html, section « Obtenir votre clé d'activation » : remplacez contact@votre-domaine.com
+- Adresse de support affichée sur le site : babaaariel@gmail.com (section « Obtenir votre clé d'activation »).
   par votre adresse e-mail (ou un lien WhatsApp / Telegram).
 - Version Mac : quand vous aurez MaBoussole-Mac.zip (fabriqué sur un Mac), mettez-le dans telechargement/.
   Le bouton « Télécharger pour Mac » s'activera tout seul.
