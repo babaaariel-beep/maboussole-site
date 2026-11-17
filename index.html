@@ -11,6 +11,9 @@
 <meta name="theme-color" content="#0f1420">
 <link rel="icon" href="images/logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="images/logo-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,6 +22,7 @@
   <div class="conteneur haut-ligne">
     <a class="marque" href="#"><img src="images/logo.svg" alt="" width="34" height="34"><span>MaBoussole <b>Graphiques</b></span></a>
     <nav class="menu" aria-label="Navigation">
+      <a class="lien-tarifs" href="#tarifs">Tarifs</a>
       <a href="#fonctions">Fonctions</a>
       <a href="#etapes">Comment ça marche</a>
       <a href="#questions">Questions</a>
@@ -31,12 +35,12 @@
   <section class="hero">
     <div class="conteneur hero-grille">
       <div class="hero-texte">
-        <p class="sur-titre">Windows · Mac Intel et Apple M</p>
+        <span class="badge-essai">Essai gratuit de 2 jours · sans paiement</span>
         <h1>Vos graphiques de trading, <span class="degrade">en temps réel</span>, sur votre ordinateur.</h1>
         <p class="chapo">Forex, or, indices, indices synthétiques et crypto. Des outils de dessin complets, toutes les unités de temps, le replay et le backtest pour mesurer votre stratégie. Installé chez vous, rapide et privé.</p>
         <div class="actions">
-          <a class="bouton" href="#telecharger">Télécharger gratuitement</a>
-          <a class="bouton fantome" href="#fonctions">Voir les fonctions</a>
+          <a class="bouton" href="#telecharger">Essayer gratuitement</a>
+          <a class="bouton fantome" href="#tarifs">Voir les tarifs</a>
         </div>
         <ul class="points">
           <li>148 actifs en temps réel</li>
@@ -60,7 +64,49 @@
     </div>
   </section>
 
-  <section id="fonctions" class="section">
+
+  <section id="tarifs" class="section tarifs">
+    <div class="conteneur">
+      <p class="sur-titre">Tarifs</p>
+      <h2>Un prix simple, sans engagement</h2>
+      <p class="intro">Toutes les fonctions sont incluses dans chaque formule. Une clé = un ordinateur.</p>
+      <div class="essai-bandeau"><b>🎁 Essai gratuit de 2 jours</b><span>Téléchargez, cliquez sur « Essayer gratuitement » à la première ouverture. Aucun paiement.</span><a class="bouton petit" href="#telecharger">Télécharger</a></div>
+      <div class="grille-tarifs">
+        <article class="tarif">
+          <h3>1 mois</h3><p class="pour">Pour découvrir</p>
+          <p class="prix"><b>3 000</b><span>F CFA</span></p>
+          <p class="par-mois">soit 3 000 F par mois</p>
+          <ul><li>Toutes les fonctions</li><li>148 actifs en temps réel</li><li>Replay et backtest</li></ul>
+          <a class="bouton fantome large" href="mailto:babaaariel@gmail.com?subject=Commande%20cl%C3%A9%20MaBoussole%20Graphiques%20%E2%80%94%201%20mois">Choisir 1 mois</a>
+        </article>
+        <article class="tarif">
+          <h3>3 mois</h3><p class="pour">Pour progresser</p>
+          <p class="prix"><b>9 000</b><span>F CFA</span></p>
+          <p class="par-mois">soit 3 000 F par mois</p>
+          <ul><li>Toutes les fonctions</li><li>148 actifs en temps réel</li><li>Replay et backtest</li></ul>
+          <a class="bouton fantome large" href="mailto:babaaariel@gmail.com?subject=Commande%20cl%C3%A9%20MaBoussole%20Graphiques%20%E2%80%94%203%20mois">Choisir 3 mois</a>
+        </article>
+        <article class="tarif">
+          <h3>6 mois</h3><p class="pour">Pour s'installer</p>
+          <p class="prix"><b>18 000</b><span>F CFA</span></p>
+          <p class="par-mois">soit 3 000 F par mois</p>
+          <ul><li>Toutes les fonctions</li><li>148 actifs en temps réel</li><li>Replay et backtest</li></ul>
+          <a class="bouton fantome large" href="mailto:babaaariel@gmail.com?subject=Commande%20cl%C3%A9%20MaBoussole%20Graphiques%20%E2%80%94%206%20mois">Choisir 6 mois</a>
+        </article>
+        <article class="tarif vedette">
+          <span class="ruban">★ Meilleure offre</span>
+          <h3>1 an</h3><p class="pour">Le meilleur prix</p>
+          <p class="prix"><b>24 000</b><span>F CFA</span></p>
+          <p class="par-mois">soit 2 000 F par mois<br><span class="economie">12 000 F d'économie</span></p>
+          <ul><li>Toutes les fonctions</li><li>148 actifs en temps réel</li><li>Replay et backtest</li></ul>
+          <a class="bouton or large" href="mailto:babaaariel@gmail.com?subject=Commande%20cl%C3%A9%20MaBoussole%20Graphiques%20%E2%80%94%201%20an">Choisir 1 an</a>
+        </article>
+      </div>
+      <p class="tarifs-note">Pour commander, cliquez sur votre formule : un message au support s'ouvre, nous vous envoyons le moyen de paiement (Mobile Money) puis votre clé. Le paiement en ligne avec clé automatique arrive bientôt.</p>
+    </div>
+  </section>
+
+  <section id="fonctions" class="section fond2">
     <div class="conteneur">
       <h2>Tout ce qu'il faut pour analyser et s'entraîner</h2>
       <p class="intro">Une interface claire, pensée pour les traders, qui fonctionne sur votre propre ordinateur.</p>
@@ -109,19 +155,19 @@
     </div>
   </section>
 
-  <section id="etapes" class="section fond2">
+  <section id="etapes" class="section">
     <div class="conteneur">
       <h2>Comment ça marche</h2>
       <p class="intro">Trois étapes, sans rien installer d'autre.</p>
       <ol class="etapes">
         <li><span class="num">1</span><h3>Téléchargez</h3><p>Choisissez Windows ou Mac, puis double-cliquez sur le fichier. L'application s'ouvre toute seule.</p></li>
-        <li><span class="num">2</span><h3>Envoyez votre code machine</h3><p>À la première ouverture, l'application affiche votre code machine. Copiez-le et envoyez-le-nous.</p></li>
-        <li><span class="num">3</span><h3>Activez votre clé</h3><p>Vous recevez votre clé d'activation. Collez-la, cliquez sur « Activer » : c'est prêt.</p></li>
+        <li><span class="num">2</span><h3>Essayez 2 jours gratuitement</h3><p>À la première ouverture, cliquez sur « Essayer gratuitement » : toutes les fonctions, sans paiement.</p></li>
+        <li><span class="num">3</span><h3>Activez votre clé</h3><p>Choisissez votre formule, recevez votre clé, collez-la et cliquez sur « Activer » : elle se lie à votre ordinateur.</p></li>
       </ol>
     </div>
   </section>
 
-  <section id="telecharger" class="section">
+  <section id="telecharger" class="section fond2">
     <div class="conteneur">
       <h2>Télécharger MaBoussole Graphiques</h2>
       <p class="intro">Gratuit à télécharger, <b>essai gratuit de 2 jours</b> dès la première ouverture. Ensuite, une clé d'activation est nécessaire pour continuer.</p>
@@ -146,7 +192,7 @@
     </div>
   </section>
 
-  <section id="questions" class="section fond2">
+  <section id="questions" class="section">
     <div class="conteneur etroit">
       <h2>Questions fréquentes</h2>
       <details><summary>Faut-il installer Python ou autre chose ?</summary><p>Non. Vous téléchargez un seul fichier et vous double-cliquez dessus. Rien d'autre à installer.</p></details>
@@ -161,11 +207,12 @@
 
   <section id="contact" class="section">
     <div class="conteneur etroit centre">
-      <h2>Obtenir votre clé d'activation</h2>
-      <p class="intro">Téléchargez le logiciel et profitez de l'<b>essai gratuit de 2 jours</b>. Pour continuer ensuite, achetez votre clé : 1 mois 3 000 F · 3 mois 9 000 F · 6 mois 18 000 F · 1 an 24 000 F. Collez-la dans le logiciel : elle se lie à votre ordinateur.</p>
-      <a class="bouton" href="#telecharger">Télécharger et essayer gratuitement</a>
-      <p class="intro" style="margin-top:22px">Une question, un souci avec votre clé ? Écrivez au support :</p>
+      <h2>Une question ?</h2>
+      <p class="intro">Un souci avec votre clé, une question sur le logiciel ? Écrivez au support, nous vous répondons rapidement.</p>
+      <div class="support">
       <a class="bouton" href="mailto:babaaariel@gmail.com?subject=Support%20MaBoussole%20Graphiques">✉ Contacter le support</a>
+        <a class="bouton fantome" href="#tarifs">Voir les tarifs</a>
+      </div>
     </div>
   </section>
 </main>
