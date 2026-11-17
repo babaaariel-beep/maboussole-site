@@ -1,0 +1,39 @@
+# Empêche GitHub de mettre en pause les robots automatiques (collecte de l'historique, publication du logiciel).
+# GitHub arrête les tâches programmées d'un dépôt public après 60 jours sans activité : ce robot passe tous les 10 jours,
+# « réactive » chaque robot (ce qui remet le compteur des 60 jours à zéro) et laisse une petite trace sur la branche
+# « activite » (jamais sur la branche principale, pour ne gêner aucune mise à jour du site).
+# Lancement à la main : onglet « Actions » > « Rester actif » > « Run workflow ».
+name: Rester actif
+
+on:
+  schedule:
+    - cron: "41 3 */10 * *"       # tous les 10 jours à 03h41 (UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write                 # trace sur la branche « activite »
+  actions: write                  # réactiver les robots
+
+jobs:
+  actif:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Réactiver les robots automatiques
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for wf in collecte.yml publier-logiciel.yml rester-actif.yml; do
+            gh api -X PUT "repos/${{ github.repository }}/actions/workflows/$wf/enable" && echo "$wf : actif" || echo "$wf : non réactivé"
+          done
+      - name: Petite activité sur la branche « activite »
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir trace && cd trace
+          git init -q && git checkout -q -b activite
+          date -u +"%Y-%m-%d %H:%M UTC" > derniere-activite.txt
+          git add derniere-activite.txt
+          git -c user.name="robot-maboussole" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -qm "Activité automatique"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" activite
+          echo "Trace déposée : $(cat derniere-activite.txt)"
