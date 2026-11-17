@@ -22,6 +22,10 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG="logiciel-$(date -u +%Y.%m.%d)-${{ github.run_number }}"
-          FICHIERS=$(ls telechargement/MaBoussole-Setup.exe telechargement/MaBoussole-Mac.zip 2>/dev/null)
+          FICHIERS=""; SYSTEMES="Windows"
+          for f in telechargement/MaBoussole-Setup.exe telechargement/MaBoussole-Mac.zip; do
+            if [ -f "$f" ]; then FICHIERS="$FICHIERS $f"; fi          # la version Mac s'ajoute quand elle existe
+          done
+          if [ -f telechargement/MaBoussole-Mac.zip ]; then SYSTEMES="Windows et Mac"; fi
           gh release create "$TAG" $FICHIERS --title "MaBoussole Graphiques $(date -u +%d/%m/%Y)" \
-            --notes "Nouvelle version de MaBoussole Graphiques (Windows$( [ -f telechargement/MaBoussole-Mac.zip ] && echo ' et Mac'))." --latest
+            --notes "Nouvelle version de MaBoussole Graphiques ($SYSTEMES)." --latest
