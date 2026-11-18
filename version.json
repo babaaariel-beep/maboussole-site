@@ -1,8 +1,8 @@
 {
- "version": "2026.11.18.2236",
+ "version": "2026.11.18.2241",
  "date": "18/11/2026",
  "nouveautes": [
-  "Tous les outils Fibonacci ont un onglet « Niveaux » : changez les valeurs, couleurs et niveaux affichés à votre guise",
+  "Réglages du Fibonacci comme sur TradingView : ligne de tendance, ligne des niveaux, prolonger, 30 niveaux modifiables, une couleur, arrière-plan, inverser, prix, valeurs ou pourcentages, position et taille des étiquettes",
   "Les couleurs, épaisseurs et styles choisis pour un outil restent pour vos prochains dessins",
   "Message « Nouvelle version disponible » dans l'application, avec mise à jour en un clic",
   "Nouvel indicateur Premium / Discount (zones ICT), entièrement réglable",
@@ -10,6 +10,6 @@
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "972e51bc142bcc762a3e63befcb75b01aae72596d12479d7f7efdbb73e27804b",
- "taille": 49877185
+ "sha256": "8b2b29c3959711e5188160ba38776713ad778ecfe610d3fbb84f4d8f6d50e9f7",
+ "taille": 49877475
 }
