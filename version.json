@@ -1,15 +1,14 @@
 {
- "version": "2026.11.18.2303",
+ "version": "2026.11.18.2308",
  "date": "18/11/2026",
  "nouveautes": [
-  "English version: choose English or Français in the account menu (Langue / Language)",
-  "Version anglaise : choisissez English ou Français dans le menu du compte (Langue)",
+  "Barre des favoris comme sur TradingView (poignée, grandes icônes, toujours visible)",
+  "Version anglaise : English ou Français dans le menu du compte (Langue)",
   "Un dessin ne suit plus jamais la souris quand le bouton est relâché",
-  "Réglages du Fibonacci comme sur TradingView",
-  "Les couleurs et styles choisis restent pour les prochains dessins"
+  "Réglages du Fibonacci comme sur TradingView"
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "b62a8c4eb463ccda43deff6f6a8fc6631a7aba6bd3faffcc7c770bd1fec7ae44",
- "taille": 49899067
+ "sha256": "51c9183c1516059c6dfc0b69d7690c28549a4f92164c49a284aa3de1f0b0085d",
+ "taille": 49898284
 }
