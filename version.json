@@ -1,14 +1,14 @@
 {
- "version": "2026.11.18.2323",
+ "version": "2026.11.18.2332",
  "date": "18/11/2026",
  "nouveautes": [
+  "Graphiques dessinés uniquement avec les cotations du marché réel : jamais Yahoo",
   "Fibonacci : on ne l'attrape que sur ses lignes ; faire glisser le graphique ne le déplace plus",
-  "Prix en direct à la seconde (flux réel Deriv, sans MetaTrader), crypto et OANDA à la seconde aussi",
-  "Barre des favoris comme sur TradingView",
-  "Version anglaise : English ou Français dans le menu du compte"
+  "Prix en direct à la seconde, sans MetaTrader",
+  "Barre des favoris comme sur TradingView, version anglaise"
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "f880cc1fcdb40d96cf432c04cc00b171acf40f85069f88c8026f67d99fb38509",
- "taille": 49904015
+ "sha256": "1c63b3dea6ffb842a65f82c6c33f034f7988e630e761fdf428e408830d1ee4fa",
+ "taille": 49901629
 }
