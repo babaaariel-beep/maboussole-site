@@ -1,14 +1,14 @@
 {
- "version": "2026.11.18.2308",
+ "version": "2026.11.18.2323",
  "date": "18/11/2026",
  "nouveautes": [
-  "Barre des favoris comme sur TradingView (poignée, grandes icônes, toujours visible)",
-  "Version anglaise : English ou Français dans le menu du compte (Langue)",
-  "Un dessin ne suit plus jamais la souris quand le bouton est relâché",
-  "Réglages du Fibonacci comme sur TradingView"
+  "Fibonacci : on ne l'attrape que sur ses lignes ; faire glisser le graphique ne le déplace plus",
+  "Prix en direct à la seconde (flux réel Deriv, sans MetaTrader), crypto et OANDA à la seconde aussi",
+  "Barre des favoris comme sur TradingView",
+  "Version anglaise : English ou Français dans le menu du compte"
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "51c9183c1516059c6dfc0b69d7690c28549a4f92164c49a284aa3de1f0b0085d",
- "taille": 49898284
+ "sha256": "f880cc1fcdb40d96cf432c04cc00b171acf40f85069f88c8026f67d99fb38509",
+ "taille": 49904015
 }
