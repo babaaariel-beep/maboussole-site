@@ -1,15 +1,15 @@
 {
- "version": "2026.11.18.2241",
+ "version": "2026.11.18.2246",
  "date": "18/11/2026",
  "nouveautes": [
-  "Réglages du Fibonacci comme sur TradingView : ligne de tendance, ligne des niveaux, prolonger, 30 niveaux modifiables, une couleur, arrière-plan, inverser, prix, valeurs ou pourcentages, position et taille des étiquettes",
+  "Un dessin ne suit plus jamais la souris quand le bouton est relâché (Fibonacci et tous les outils)",
+  "La page se recharge toute seule quand une nouvelle version est installée",
+  "Réglages du Fibonacci comme sur TradingView : ligne de tendance (afficher / masquer), ligne des niveaux, prolonger, niveaux modifiables, une couleur, arrière-plan, inverser, prix, étiquettes",
   "Les couleurs, épaisseurs et styles choisis pour un outil restent pour vos prochains dessins",
-  "Message « Nouvelle version disponible » dans l'application, avec mise à jour en un clic",
-  "Nouvel indicateur Premium / Discount (zones ICT), entièrement réglable",
-  "Menu du compte : votre e-mail d'achat, aide, support, quoi de neuf, raccourcis, thème"
+  "Message « Nouvelle version disponible » avec mise à jour en un clic, indicateur Premium / Discount, menu du compte"
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "8b2b29c3959711e5188160ba38776713ad778ecfe610d3fbb84f4d8f6d50e9f7",
- "taille": 49877475
+ "sha256": "9eb037459e1776a7e9a13e7c3838be10087a4045a2ebfdd3ff72d3e5f50693f1",
+ "taille": 49878012
 }
