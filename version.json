@@ -1,14 +1,14 @@
 {
- "version": "2026.11.18.2332",
+ "version": "2026.11.18.2344",
  "date": "18/11/2026",
  "nouveautes": [
+  "Temps réel en flux continu : chaque nouveau prix du marché arrive tout de suite sur le graphique (comme TradingView)",
   "Graphiques dessinés uniquement avec les cotations du marché réel : jamais Yahoo",
-  "Fibonacci : on ne l'attrape que sur ses lignes ; faire glisser le graphique ne le déplace plus",
-  "Prix en direct à la seconde, sans MetaTrader",
+  "Fibonacci : on ne l'attrape que sur ses lignes",
   "Barre des favoris comme sur TradingView, version anglaise"
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "1c63b3dea6ffb842a65f82c6c33f034f7988e630e761fdf428e408830d1ee4fa",
- "taille": 49901629
+ "sha256": "2e5dd2121ab2532e3661341a04f874908d2b11b29894f76b05474eba07ceda2b",
+ "taille": 49904371
 }
