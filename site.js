@@ -34,7 +34,7 @@ document.getElementById("annee").textContent = new Date().getFullYear();
 
 // Prix lus dans votre feuille Google (onglet « Tarifs ») : changez un prix là-bas, le site suit tout seul.
 // REGISTRE = adresse de l'application Web de la feuille (se termine par /exec), remplie une fois la feuille publiée.
-var REGISTRE = "";
+var REGISTRE = "https://script.google.com/macros/s/AKfycbzAvgfdbiKtq7JVGKf7sfQTUQgdj620tS3j4r_2XydvI24G2vuJbWCvSQoB8a5sV3gC9Q/exec";
 (function () {
   if (!REGISTRE) return;                                     // pas encore publiée : on garde les prix écrits dans la page
   fetch(REGISTRE + "?action=tarifs").then(function (r) { return r.json(); }).then(function (d) {
