@@ -1,11 +1,11 @@
 {
- "version": "2026.11.19.1428",
+ "version": "2026.11.19.1448",
  "date": "19/11/2026",
  "nouveautes": [
-  "Rectangle comme TradingView : prolonger, bordure (couleur, épaisseur, style), ligne médiane, arrière-plan (couleur, opacité), onglet Texte dans le rectangle."
+  "Nouveaux indicateurs : Filigrane AG FX, TDI (Traders Dynamic Index) et ICT Session Killzones (sessions, killzones, CBDR, hauts et bas prolongés)."
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "fbc90abf408b88628bc4fd213e16b90116c05f6308c07a16fe1bc1252bce7774",
- "taille": 49918480
+ "sha256": "4636929c1ddca9429bd01f9155f5a7466119b42ed0f59cfe37bffb51d9efd439",
+ "taille": 49923967
 }
