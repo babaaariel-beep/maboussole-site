@@ -1,14 +1,14 @@
 {
- "version": "2026.11.19.0348",
+ "version": "2026.11.19.0406",
  "date": "19/11/2026",
  "nouveautes": [
-  "Correction : la page ne glisse plus de côté (fenêtre moyenne, changement de langue)",
-  "La barre du haut tient toujours dans l'écran (icônes seules si la place manque)",
+  "Essai gratuit de 7 jours (au lieu de 3)",
+  "La barre du haut tient toujours dans l'écran ; la page ne glisse plus de côté",
   "Anglais complet : dates, mois et unités",
   "Paiement qui n'aboutit pas : bouton « Écrire au support »"
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "2f3e2f8faa584993816503d6296cf8baeedd3a345a31bd040b26faf2bbfac8cb",
- "taille": 49909572
+ "sha256": "06fda3937aaf9abc1437f18fd26fb8b72debe1b18e89fceb1ebf215087c30692",
+ "taille": 49908686
 }
