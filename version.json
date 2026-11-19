@@ -1,14 +1,14 @@
 {
- "version": "2026.11.19.0334",
+ "version": "2026.11.19.0348",
  "date": "19/11/2026",
  "nouveautes": [
-  "Anglais : dates, mois et unités (D, W, M) en anglais",
-  "Plusieurs fenêtres ouvertes : plus de risque de blocage",
-  "Paiement qui n'aboutit pas : bouton « Écrire au support »",
-  "Alertes d'intrusion détaillées, temps réel en flux continu"
+  "Correction : la page ne glisse plus de côté (fenêtre moyenne, changement de langue)",
+  "La barre du haut tient toujours dans l'écran (icônes seules si la place manque)",
+  "Anglais complet : dates, mois et unités",
+  "Paiement qui n'aboutit pas : bouton « Écrire au support »"
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "cc8ac1c91cbf397e432e053091c4ae01a83cbebf0a837e95e7134749b0ad472e",
- "taille": 49909950
+ "sha256": "2f3e2f8faa584993816503d6296cf8baeedd3a345a31bd040b26faf2bbfac8cb",
+ "taille": 49909572
 }
