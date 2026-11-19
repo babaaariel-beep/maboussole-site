@@ -1,14 +1,14 @@
 {
- "version": "2026.11.19.1154",
+ "version": "2026.11.19.1351",
  "date": "19/11/2026",
  "nouveautes": [
-  "Correction : passer en anglais ne bloque plus l'application (la traduction automatique du navigateur est désactivée)",
+  "Ligne de tendance comme TradingView : barre flottante, extrémités en flèche, prolonger, point médian, étiquettes de prix, statistiques, texte sur la ligne, renommer",
+  "Passer en anglais ne bloque plus l'application",
   "Sécurité de l'essai gratuit renforcée",
-  "Essai gratuit de 7 jours",
-  "La barre du haut tient toujours dans l'écran"
+  "Essai gratuit de 7 jours"
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "353b3344d2a9a8fd2c7d7f6442b720fbbfc6ffa68c4c71ce9be846edf651059f",
- "taille": 49911335
+ "sha256": "cb34b4b2bd397c5e6861a4da4bbe9421b128b2a35db2208aa1ff4bcfe061e7a9",
+ "taille": 49916229
 }
