@@ -58,10 +58,35 @@ var REGISTRE = "https://script.google.com/macros/s/AKfycbzAvgfdbiKtq7JVGKf7sfQTU
 // Tant que REGISTRE est vide, les boutons gardent l'e-mail au support.
 (function () {
   var merci = document.getElementById("merci");
-  if (/[?&]merci=1/.test(location.search) && merci) {
+  var SUPPORT = "mailto:babaaariel@gmail.com?subject=" + encodeURIComponent("Aide pour mon paiement MaBoussole Graphiques");
+  function bandeau(classe, html) {
+    merci.className = "bandeau-merci " + classe;
+    merci.innerHTML = html + ' <button type="button" aria-label="Fermer">×</button>';
     merci.hidden = false;
-    merci.querySelector("button").onclick = function () { merci.hidden = true; };
+    merci.querySelector("button[aria-label]").onclick = function () { merci.hidden = true; };
+  }
+  var boutonsAide = '<span class="bandeau-actions"><a class="bouton petit" href="' + SUPPORT + '">✉ Écrire au support</a> <a class="bouton fantome petit" href="#tarifs">Réessayer</a></span>';
+  if (/[?&]merci=1/.test(location.search) && merci) {     // retour de la page de paiement : on vérifie où en est la commande
     try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) { /* rien */ }
+    var session = ""; try { session = localStorage.getItem("mbgCommande") || ""; } catch (e) { /* rien */ }
+    if (!REGISTRE || !session) {
+      bandeau("", "Merci ! Si votre paiement est validé, votre clé arrive par e-mail dans quelques minutes (regardez aussi les spams). Un souci ? " + boutonsAide);
+    } else {
+      bandeau("attente", "⏳ Vérification de votre paiement…");
+      var essais = 0;
+      var verifier = function () {
+        fetch(REGISTRE, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify({ action: "etat", session: session }) })
+          .then(function (r) { return r.json(); }).then(function (d) {
+            if (!d.ok) { bandeau("", "Merci ! Si votre paiement est validé, votre clé arrive par e-mail dans quelques minutes (regardez aussi les spams). Un souci ? " + boutonsAide); return; }
+            if (d.statut === "paye") { try { localStorage.removeItem("mbgCommande"); } catch (e) { /* rien */ }
+              bandeau("", "✅ Paiement reçu, merci ! Votre clé arrive par e-mail dans quelques minutes (regardez aussi les spams)."); return; }
+            if (d.statut === "echec") { bandeau("echec", "❌ Votre paiement n'a pas abouti : aucun montant n'a été validé. Nous pouvons vous aider à le finaliser. " + boutonsAide); return; }
+            if (++essais < 24) { setTimeout(verifier, 5000); return; }
+            bandeau("attente", "⏳ Votre paiement est encore en cours de validation : votre clé partira par e-mail dès qu'il sera confirmé. Un souci ? " + boutonsAide);
+          }).catch(function () { bandeau("attente", "Nous n'arrivons pas à vérifier votre paiement pour l'instant. Si vous avez payé, votre clé arrivera par e-mail. Un souci ? " + boutonsAide); });
+      };
+      verifier();
+    }
   }
   if (!REGISTRE) return;
   var fen = document.getElementById("commande"), form = document.getElementById("commandeForm");
@@ -90,8 +115,10 @@ var REGISTRE = "https://script.google.com/macros/s/AKfycbzAvgfdbiKtq7JVGKf7sfQTU
       email: document.getElementById("commandeEmail").value.trim() });
     // text/plain : accepté par Google sans requête préalable ; le nom et l'e-mail voyagent dans le corps, pas dans l'adresse
     fetch(REGISTRE, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: corps }).then(function (r) { return r.json(); }).then(function (d) {
-      if (d.ok && /^https:\/\//.test(d.url)) { location.href = d.url; return; }
-      err.textContent = d.erreur || "Paiement momentanément indisponible. Réessayez dans un instant."; err.hidden = false; payer.disabled = false;
+      if (d.ok && /^https:\/\//.test(d.url)) { try { if (d.session) localStorage.setItem("mbgCommande", d.session); } catch (e) { /* rien */ } location.href = d.url; return; }
+      err.innerHTML = ""; err.appendChild(document.createTextNode((d.erreur || "Paiement momentanément indisponible. Réessayez dans un instant.") + " "));
+      var aide = document.createElement("a"); aide.href = SUPPORT; aide.textContent = "Écrire au support"; err.appendChild(aide);
+      err.hidden = false; payer.disabled = false;
     }).catch(function () {
       err.textContent = "Connexion impossible. Vérifiez votre internet et réessayez."; err.hidden = false; payer.disabled = false;
     });

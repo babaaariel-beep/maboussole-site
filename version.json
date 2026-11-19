@@ -1,14 +1,14 @@
 {
- "version": "2026.11.19.0043",
+ "version": "2026.11.19.0317",
  "date": "19/11/2026",
  "nouveautes": [
-  "Alertes d'intrusion détaillées : adresse, appareil, système, navigateur, nom sur le réseau, adresse matérielle, ville et fournisseur d'accès",
-  "Temps réel en flux continu",
-  "Graphiques uniquement avec les cotations du marché réel : jamais Yahoo",
-  "Fibonacci : on ne l'attrape que sur ses lignes"
+  "Paiement qui n'aboutit pas : message clair et bouton « Écrire au support »",
+  "Aperçu du message de mise à jour pour le propriétaire",
+  "Alertes d'intrusion détaillées",
+  "Temps réel en flux continu, jamais Yahoo"
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "b2f217cc8d57c28e056e34555a45d30bc001a43f813662009b32696d63ace52b",
- "taille": 49909344
+ "sha256": "091eb0e1ed43fc57682977a8dc04f2b2b6549e64fc86ae16304a5036e5184d5c",
+ "taille": 49907522
 }

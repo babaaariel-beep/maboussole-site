@@ -197,3 +197,8 @@ details p { margin: 0 0 18px; color: var(--doux); }
 .bandeau-merci { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 90; background: #0f3d2e; border: 1px solid var(--vert); color: var(--texte); border-radius: 14px; padding: 14px 44px 14px 16px; box-shadow: var(--ombre); }
 .bandeau-merci[hidden] { display: none; }
 .bandeau-merci button { position: absolute; top: 8px; right: 10px; background: none; border: 0; color: var(--texte); font-size: 22px; cursor: pointer; }
+
+.bandeau-merci.attente { background: #3a2f0b; border-color: #f0b429; }
+.bandeau-merci.echec { background: #3d1414; border-color: #f23645; }
+.bandeau-merci .bandeau-actions { display: inline-flex; gap: 8px; flex-wrap: wrap; margin-left: 6px; vertical-align: middle; }
+.bouton.petit { padding: 6px 12px; font-size: 14px; }
