@@ -35,22 +35,84 @@ document.getElementById("annee").textContent = new Date().getFullYear();
 // Prix lus dans votre feuille Google (onglet « Tarifs ») : changez un prix là-bas, le site suit tout seul.
 // REGISTRE = adresse de l'application Web de la feuille (se termine par /exec), remplie une fois la feuille publiée.
 var REGISTRE = "https://script.google.com/macros/s/AKfycbzAvgfdbiKtq7JVGKf7sfQTUQgdj620tS3j4r_2XydvI24G2vuJbWCvSQoB8a5sV3gC9Q/exec";
+// Les prix sont fixés en F CFA ; chaque visiteur les voit dans sa monnaie (devinée, ou choisie dans la liste), au taux du jour.
+var DEVISES = {
+  XOF: ["F CFA", "Franc CFA (UEMOA)"], XAF: ["F CFA", "Franc CFA (CEMAC)"], EUR: ["€", "Euro"], USD: ["$ US", "Dollar américain"], GBP: ["£", "Livre sterling"],
+  CAD: ["$ CA", "Dollar canadien"], CHF: ["CHF", "Franc suisse"], MAD: ["DH", "Dirham marocain"], DZD: ["DA", "Dinar algérien"], TND: ["DT", "Dinar tunisien"],
+  GNF: ["GNF", "Franc guinéen"], CDF: ["FC", "Franc congolais"], NGN: ["₦", "Naira"], GHS: ["GH₵", "Cedi"], KES: ["KSh", "Shilling kényan"], ZAR: ["R", "Rand"], EGP: ["E£", "Livre égyptienne"]
+};
+var TAUX = { XOF: 1, XAF: 1, EUR: 1 / 655.957 };               // parités fixes ; les autres monnaies arrivent du service de taux
+var devise = "XOF";
+function devinerDevise() {
+  var tz = "", langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""];
+  try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) { /* rien */ }
+  var fr = /^fr/i.test(langs[0] || "");
+  var parFuseau = { "Africa/Abidjan": "XOF", "Africa/Dakar": "XOF", "Africa/Bamako": "XOF", "Africa/Ouagadougou": "XOF", "Africa/Niamey": "XOF", "Africa/Lome": "XOF",
+    "Africa/Porto-Novo": "XOF", "Africa/Bissau": "XOF", "Africa/Conakry": "GNF", "Africa/Douala": "XAF", "Africa/Libreville": "XAF", "Africa/Brazzaville": "XAF",
+    "Africa/Ndjamena": "XAF", "Africa/Bangui": "XAF", "Africa/Malabo": "XAF", "Africa/Kinshasa": "CDF", "Africa/Lubumbashi": "CDF", "Africa/Casablanca": "MAD",
+    "Africa/Algiers": "DZD", "Africa/Tunis": "TND", "Africa/Accra": "GHS", "Africa/Nairobi": "KES", "Africa/Johannesburg": "ZAR", "Africa/Cairo": "EGP",
+    "Europe/London": "GBP", "Europe/Zurich": "CHF", "America/Toronto": "CAD", "America/Vancouver": "CAD", "America/Montreal": "CAD", "America/Edmonton": "CAD", "America/Winnipeg": "CAD", "America/Halifax": "CAD" };
+  if (tz === "Africa/Lagos") return fr ? "XAF" : "NGN";                       // même heure pour le Nigeria et l'Afrique centrale : la langue tranche
+  if (/^(Atlantic\/Reykjavik|Etc\/GMT|Etc\/UTC|UTC|GMT)$/.test(tz) && fr) return "XOF";   // heure GMT d'un PC en français : Afrique de l'Ouest
+  if (parFuseau[tz]) return parFuseau[tz];
+  var pays = { CI: "XOF", SN: "XOF", ML: "XOF", BF: "XOF", NE: "XOF", TG: "XOF", BJ: "XOF", GW: "XOF", CM: "XAF", GA: "XAF", CG: "XAF", TD: "XAF", CF: "XAF", GQ: "XAF",
+    GN: "GNF", CD: "CDF", MA: "MAD", DZ: "DZD", TN: "TND", NG: "NGN", GH: "GHS", KE: "KES", ZA: "ZAR", EG: "EGP", GB: "GBP", CH: "CHF", CA: "CAD", US: "USD",
+    FR: "EUR", BE: "EUR", DE: "EUR", ES: "EUR", IT: "EUR", PT: "EUR", NL: "EUR", LU: "EUR", AT: "EUR", IE: "EUR", FI: "EUR", GR: "EUR", MC: "EUR" };
+  if (/^Europe\//.test(tz) && !/^Europe\/(London|Zurich|Moscow|Istanbul|Kiev|Kyiv|Warsaw|Prague|Budapest|Bucharest|Sofia|Stockholm|Oslo|Copenhagen|Belgrade)$/.test(tz)) return "EUR";
+  if (/^America\//.test(tz)) return "USD";
+  for (var k = 0; k < langs.length; k++) { var m = /-([A-Z]{2})$/i.exec(langs[k] || ""); if (m && pays[m[1].toUpperCase()]) return pays[m[1].toUpperCase()]; }
+  return fr ? "XOF" : "USD";
+}
+function enDevise(xof) {                                          // [montant affiché, symbole]
+  var t = TAUX[devise], v = xof * t, d = DEVISES[devise];
+  var dec = v >= 1000 ? 0 : v >= 100 ? 1 : 2;
+  return [v.toLocaleString("fr-FR", { minimumFractionDigits: devise === "XOF" || devise === "XAF" ? 0 : dec, maximumFractionDigits: devise === "XOF" || devise === "XAF" ? 0 : dec }), d[0]];
+}
+function afficherPrix() {
+  if (TAUX[devise] == null) devise = "XOF";
+  var cartes = document.querySelectorAll(".tarif[data-jours]"), xof30 = 0;
+  cartes.forEach(function (c) { if (c.dataset.xof == null) c.dataset.xof = (c.querySelector(".prix b").textContent || "").replace(/\D/g, ""); if (c.dataset.jours === "30") xof30 = +c.dataset.xof; });
+  cartes.forEach(function (c) {
+    var xof = +c.dataset.xof, mois = Math.max(1, Math.round(+c.dataset.jours / 30)), p = enDevise(xof), pm = enDevise(xof / mois);
+    c.querySelector(".prix b").textContent = p[0]; c.querySelector(".prix span").textContent = p[1];
+    c.querySelector(".par-mois").firstChild.textContent = "soit " + pm[0] + " " + pm[1] + " par mois";
+    var eco = c.querySelector(".economie"), base = xof30 * mois;
+    if (eco) { if (base > xof) { var e = enDevise(base - xof); eco.textContent = e[0] + " " + e[1] + " d'économie"; eco.hidden = false; } else eco.hidden = true; }
+  });
+  var note = document.getElementById("deviseNote"), sel = document.getElementById("devise");
+  if (sel && sel.value !== devise) sel.value = devise;
+  if (note) { note.hidden = devise === "XOF" || devise === "XAF"; note.textContent = "Prix convertis au taux du jour, à titre indicatif. Le paiement se fait en F CFA (Mobile Money ou carte) : votre opérateur ou votre banque convertit automatiquement."; }
+}
+window.prixEnDevise = function (xof) { var p = enDevise(xof); return devise === "XOF" || devise === "XAF" ? p[0] + " " + p[1] : p[0] + " " + p[1] + " (" + Math.round(xof).toLocaleString("fr-FR") + " F CFA)"; };
+(function () {
+  var choisi = null; try { choisi = localStorage.getItem("mbgDevise"); } catch (e) { /* rien */ }
+  devise = DEVISES[choisi] ? choisi : devinerDevise();
+  var sel = document.getElementById("devise");
+  if (sel) {
+    sel.innerHTML = Object.keys(DEVISES).map(function (k) { return '<option value="' + k + '">' + DEVISES[k][1] + " (" + DEVISES[k][0] + ")</option>"; }).join("");
+    sel.addEventListener("change", function () { devise = sel.value; try { localStorage.setItem("mbgDevise", devise); } catch (e) { /* rien */ } afficherPrix(); });
+  }
+  afficherPrix();
+  // taux du jour (gardés 12 h dans le navigateur)
+  var cache = null; try { cache = JSON.parse(localStorage.getItem("mbgTaux") || "null"); } catch (e) { /* rien */ }
+  var appliquer = function (r) { for (var k in DEVISES) if (r[k] && k !== "XOF" && k !== "XAF" && k !== "EUR") TAUX[k] = r[k]; afficherPrix(); };
+  if (cache && cache.t > Date.now() - 12 * 3600e3 && cache.r) appliquer(cache.r);
+  else fetch("https://open.er-api.com/v6/latest/XOF").then(function (r) { return r.json(); }).then(function (d) {
+    if (d && d.result === "success" && d.rates) { try { localStorage.setItem("mbgTaux", JSON.stringify({ t: Date.now(), r: d.rates })); } catch (e) { /* rien */ } appliquer(d.rates); }
+  }).catch(function () { /* service de taux injoignable : F CFA et euro restent justes, les autres monnaies retombent en F CFA */ });
+})();
+
 (function () {
   if (!REGISTRE) return;                                     // pas encore publiée : on garde les prix écrits dans la page
   fetch(REGISTRE + "?action=tarifs").then(function (r) { return r.json(); }).then(function (d) {
     var tarifs = {}; (d.tarifs || []).forEach(function (t) { tarifs[t.jours] = t; });
     if (!Object.keys(tarifs).length) return;
-    var fmt = function (n) { return Math.round(n).toLocaleString("fr-FR"); };
     document.querySelectorAll(".tarif[data-jours]").forEach(function (carte) {
       var t = tarifs[carte.dataset.jours];
       if (!t) { carte.hidden = true; return; }               // durée mise sur « NON » dans la feuille : cachée
-      carte.hidden = false;
-      carte.querySelector(".prix b").textContent = fmt(t.prix);
-      var mois = Math.max(1, Math.round(t.jours / 30)), pm = carte.querySelector(".par-mois");
-      var eco = carte.querySelector(".economie"), base = tarifs[30] ? tarifs[30].prix * mois : 0;
-      pm.firstChild.textContent = "soit " + fmt(t.prix / mois) + " F par mois";
-      if (eco) { if (base > t.prix) eco.textContent = fmt(base - t.prix) + " F d'économie"; else eco.hidden = true; }
+      carte.hidden = false; carte.dataset.xof = Math.round(+t.prix);
     });
+    afficherPrix();
   }).catch(function () { /* feuille injoignable : on garde les prix écrits dans la page */ });
 })();
 
@@ -103,7 +165,7 @@ var REGISTRE = "https://script.google.com/macros/s/AKfycbzAvgfdbiKtq7JVGKf7sfQTU
       var carte = a.closest(".tarif");
       jours = +carte.dataset.jours;
       document.getElementById("commandeFormule").textContent = "· " + (carte.querySelector("h3") || {}).textContent;
-      document.getElementById("commandePrix").textContent = (carte.querySelector(".prix") || {}).textContent.replace(/\s+/g, " ").trim();
+      document.getElementById("commandePrix").textContent = window.prixEnDevise ? window.prixEnDevise(+carte.dataset.xof) : (carte.querySelector(".prix") || {}).textContent.replace(/\s+/g, " ").trim();
       err.hidden = true; payer.disabled = false; fen.hidden = false;
       document.getElementById("commandeNom").focus();
     });
