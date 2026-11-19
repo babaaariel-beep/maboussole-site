@@ -1,11 +1,11 @@
 {
- "version": "2026.11.19.1416",
+ "version": "2026.11.19.1428",
  "date": "19/11/2026",
  "nouveautes": [
-  "Mises en page comme TradingView : bouton avec le nom, Sauvegarder (Ctrl+S), sauvegarde automatique, copie, renommer, nouvelle, récemment utilisé, ouvrir, partager/importer un fichier, télécharger les données du graphique (CSV)."
+  "Rectangle comme TradingView : prolonger, bordure (couleur, épaisseur, style), ligne médiane, arrière-plan (couleur, opacité), onglet Texte dans le rectangle."
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "2eb61d1070ae50c1c817f774d580d11cb3c7a495c7cdc68deab3e4e9fe0f311f",
- "taille": 49920003
+ "sha256": "fbc90abf408b88628bc4fd213e16b90116c05f6308c07a16fe1bc1252bce7774",
+ "taille": 49918480
 }
