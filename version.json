@@ -1,14 +1,14 @@
 {
- "version": "2026.11.19.0423",
+ "version": "2026.11.19.1154",
  "date": "19/11/2026",
  "nouveautes": [
-  "Sécurité de l'essai gratuit renforcée : impossible de le rallonger ou de le recommencer",
+  "Correction : passer en anglais ne bloque plus l'application (la traduction automatique du navigateur est désactivée)",
+  "Sécurité de l'essai gratuit renforcée",
   "Essai gratuit de 7 jours",
-  "La barre du haut tient toujours dans l'écran",
-  "Paiement qui n'aboutit pas : bouton « Écrire au support »"
+  "La barre du haut tient toujours dans l'écran"
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "6bc29aec1f405a6962cb780274b798a97e79b63d25f029235c7118d992bd5967",
- "taille": 49910091
+ "sha256": "353b3344d2a9a8fd2c7d7f6442b720fbbfc6ffa68c4c71ce9be846edf651059f",
+ "taille": 49911335
 }
