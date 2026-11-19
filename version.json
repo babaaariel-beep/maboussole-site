@@ -1,11 +1,11 @@
 {
- "version": "2026.11.19.1504",
+ "version": "2026.11.19.1522",
  "date": "19/11/2026",
  "nouveautes": [
-  "Filigrane AG FX : date du jour et « SYMBOLE | UNITÉ » en bas au centre du graphique, comme TradingView."
+  "Toutes les fenêtres de réglages (outils de dessin, indicateurs, graphique…) se déplacent à la souris en attrapant leur titre ; position retenue, double-clic sur le titre pour la remettre au centre."
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "4c8ca19ee83591950ac62f0154c71b3373fa305ef1276551244e7b08e35ab8cf",
- "taille": 49921068
+ "sha256": "414505e35413f0dee868877b12d4d356a4633dbc3f9235f921b0444a9389f66a",
+ "taille": 49922761
 }
