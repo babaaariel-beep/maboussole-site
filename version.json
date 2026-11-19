@@ -1,11 +1,11 @@
 {
- "version": "2026.11.19.1550",
+ "version": "2026.11.19.1602",
  "date": "19/11/2026",
  "nouveautes": [
-  "Pine Script : écrivez vos propres indicateurs comme sur TradingView (bouton « ✎ Pine Script » dans Indicateurs). Site : prix affichés dans la monnaie du visiteur."
+  "Photo du graphique : rangée dans Documents › MaBoussole Graphiques › Captures, copiée pour la coller, bouton « Ouvrir le dossier ». Analyse enregistrée : l'onglet « Mes analyses » s'ouvre tout seul."
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "4ca3a58e2dfa67d286b30aa14648bc7bb657070d579ad7a83f6b5ee3c473a02c",
- "taille": 49940000
+ "sha256": "014d351b0fd3b0a1647604e06eca559624711d6d70f7fdfdd3a225da0f7d5f59",
+ "taille": 49942041
 }
