@@ -1,11 +1,11 @@
 {
- "version": "2026.11.19.1448",
+ "version": "2026.11.19.1504",
  "date": "19/11/2026",
  "nouveautes": [
-  "Nouveaux indicateurs : Filigrane AG FX, TDI (Traders Dynamic Index) et ICT Session Killzones (sessions, killzones, CBDR, hauts et bas prolongés)."
+  "Filigrane AG FX : date du jour et « SYMBOLE | UNITÉ » en bas au centre du graphique, comme TradingView."
  ],
  "windows": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Setup.exe",
  "mac": "https://babaaariel-beep.github.io/maboussole-site/telechargement/MaBoussole-Mac.zip",
- "sha256": "4636929c1ddca9429bd01f9155f5a7466119b42ed0f59cfe37bffb51d9efd439",
- "taille": 49923967
+ "sha256": "4c8ca19ee83591950ac62f0154c71b3373fa305ef1276551244e7b08e35ab8cf",
+ "taille": 49921068
 }
